@@ -14,6 +14,24 @@ This is a starter kit for authentication in NextJS. It is a fork from [rest-next
 
 This repo illustrates user authentication logic with NextAuth v4 combined with credentials using the default configuration and the Prisma Adapter. No [callbacks](https://next-auth.js.org/configuration/callbacks) are used or needed for the flow to work - you can use both combined.
 
+# Install & run
+
+install
+```
+git clone https://github.com/mikemajara/nextjs-prisma-next-auth-credentials
+yarn install
+```
+
+copy environment and fill in with your data
+```
+cp .env .env.local
+```
+
+run
+```
+yarn dev
+```
+
 ## Motiviation
 Setting up credentials is generally [not recommended](https://github.com/nextauthjs/next-auth/discussions/3364) "_with your database because of the security implications most people aren't ware of._", but they are widely used and much needed for applications, specially at the start of a project. You don't want to start dealing with OAuth from the start, but need some user management.
 
@@ -26,4 +44,4 @@ Nextauth has ~~very~~ **too** simple instructions and barely pays attention to c
 
 ### Using Gmail as your email provider
 
-If you are using Gmail to send e-mails for passwordless authentication, make sure you enable **Less secure app access**. Go to Google > Manage Account > Security > Less secure app access, turn it on. If you don't, google will reject your user & password from `nodemailer`
+If you are using Gmail to send e-mails for passwordless authentication, make sure you enable **Less secure app access**. Go to Google > Manage Account > Security > Less secure app access, turn it on. If you don't, google will reject your user & password accessed by `nodemailer`.
